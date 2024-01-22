@@ -6,7 +6,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Application name -->
-    <string name="derp_app_name" translatable="false">DerpLauncher</string>
+    <string name="derp_app_name" translatable="false">Launcher3</string>
 
     <!-- Folder titles -->
     <string name="google_folder_title" translatable="false">Google</string>
