@@ -201,7 +201,7 @@ android_library {
 // Build rule for Launcher3 app.
 //
 android_app {
-    name: "DerpLauncher",
+    name: "Launcher3",
 
     static_libs: [
         "Launcher3CommonDepsLib",
@@ -232,10 +232,7 @@ android_app {
         "Launcher2",
         "QuickSearchBox",
     ],
-    required: [
-        "privapp_whitelist_com.android.launcher3",
-        "privapp_whitelist_derp_launcher3.xml",
-    ],
+    required: ["privapp_whitelist_com.android.launcher3"],
 
     jacoco: {
         include_filter: ["com.android.launcher3.**"],
@@ -337,7 +334,7 @@ android_library {
 
 // Build rule for Launcher3 Go app for Android Go devices.
 android_app {
-    name: "DerpLauncherGo",
+    name: "Launcher3Go",
 
     static_libs: ["Launcher3CommonDepsLib"],
 
@@ -363,13 +360,8 @@ android_app {
         "Launcher2",
         "Launcher3",
         "Launcher3QuickStep",
-        "Launcher3Go",
-        "QuickSearchBox",
     ],
-    required: [
-        "privapp_whitelist_com.android.launcher3",
-        "privapp_whitelist_derp_launcher3.xml",
-    ],
+    required: ["privapp_whitelist_com.android.launcher3"],
 
     additional_manifests: [
         "AndroidManifest.xml",
@@ -385,7 +377,7 @@ android_app {
 
 // Build rule for Quickstep app.
 android_app {
-    name: "DerpLauncherQuickStep",
+    name: "Launcher3QuickStep",
 
     static_libs: ["Launcher3QuickStepLib"],
     optimize: {
@@ -406,10 +398,7 @@ android_app {
         "Launcher3QuickStep",
         "QuickSearchBox",
     ],
-    required: [
-        "privapp_whitelist_com.android.launcher3",
-        "privapp_whitelist_derp_launcher3.xml",
-    ],
+    required: ["privapp_whitelist_com.android.launcher3"],
 
     resource_dirs: ["quickstep/res"],
 
@@ -427,7 +416,7 @@ android_app {
 
 // Build rule for Launcher3 Go app with quickstep for Android Go devices.
 android_app {
-    name: "DerpLauncherQuickStepGo",
+    name: "Launcher3QuickStepGo",
 
     static_libs: [
         "SystemUI-statsd",
@@ -462,10 +451,7 @@ android_app {
         "Launcher3QuickStepGo",
         "QuickSearchBox",
     ],
-    required: [
-        "privapp_whitelist_com.android.launcher3",
-        "privapp_whitelist_derp_launcher3.xml",
-    ],
+    required: ["privapp_whitelist_com.android.launcher3"],
 
     additional_manifests: [
         "go/AndroidManifest.xml",
@@ -478,11 +464,4 @@ android_app {
         include_filter: ["com.android.launcher3.*"],
     }
 
-}
-
-prebuilt_etc {
-    name: "privapp_whitelist_derp_launcher3.xml",
-    src: "privapp_whitelist_derp_launcher3.xml",
-    system_ext_specific: true,
-    sub_dir: "permissions",
 }
